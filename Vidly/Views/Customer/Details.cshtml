@@ -1,0 +1,15 @@
+﻿@model Vidly.Models.Customer
+@{
+    ViewBag.Title = "Customer Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Name</h2>
+<ul class="list-group">
+    <li class="list-group-item">MembershipType: @Model.MembershipType.Name</li>
+    @if (Model.BirthDate != null)
+    {
+        <li class="list-group-item">Birthdate: @String.Format("{0:dd/MM/yyyy}", Model.BirthDate)</li>
+    }
+</ul>
+
